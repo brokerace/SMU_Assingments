@@ -1,0 +1,7 @@
+--8.In descending order, list the frequency count of employee last names, 
+-- i.e., how many employees share each last name.
+
+SELECT DISTINCT(last_name) "last name", COUNT(last_name) qty_last_name
+FROM employees
+GROUP BY last_name 
+ORDER BY COUNT(last_name) DESC;

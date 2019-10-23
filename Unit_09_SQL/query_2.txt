@@ -1,0 +1,8 @@
+--2. List employees who were hired in 1986.
+
+SELECT last_name "Last Name", 
+first_name "First Name", 
+date_part('year', hire_date) "Hire Year"
+FROM employees
+WHERE date_part('year', hire_date) = 1986
+ORDER BY last_name;
